@@ -18,10 +18,10 @@ let Repository = (props) => {
             
             } } >
             <p>
-                <strong>Name </strong>:{props.repo.full_name} <br></br>
-                <strong>Count</strong>:{props.repo.open_issues_count} <br></br>
-                <strong>URL</strong>:{props.repo.html_url} <br></br>
-                <strong>Languages</strong>:{languages}
+                <strong>Name </strong>: {props.repo.full_name.toUpperCase()} <br></br>
+                <strong>Count </strong>: {props.repo.open_issues_count} <br></br>
+                <strong>URL </strong>: {props.repo.html_url} <br></br>
+                <strong>Languages</strong> : {languages}
             </p>
 
         </div>
