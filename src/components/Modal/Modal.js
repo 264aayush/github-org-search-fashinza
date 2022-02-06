@@ -134,7 +134,7 @@ let Modal = (props) => {
             setVisible(true)
             console.log(props.repo)
             let data = {}
-            data.owner = props.repo.owner.login
+            data.owner = props.repo.owner.login.toUpperCase();
             if (props.repo.license != null)
                 data.license = props.repo.license.name
             else data.license = "null"
