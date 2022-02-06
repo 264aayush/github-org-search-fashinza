@@ -149,10 +149,10 @@ let Modal = (props) => {
             setRepoData(data);
         }
     }, [props.repo])
-    if (props.repo == null || JSON.stringify(props.repo) == JSON.stringify({}))
+    if (props.repo == null || JSON.stringify(props.repo) === JSON.stringify({}))
         return <div></div>
     return <div id="myModal" class="modal" style={{ display: visible ? 'block' : 'none' }} onClick={(e) => {
-        if (e.target.id == 'myModal')
+        if (e.target.id === 'myModal')
             setVisible(false)
     }}>
         <div className="modal-content">
