@@ -20,7 +20,7 @@ let Repository = (props) => {
             <p>
                 <strong>Name </strong>: {props.repo.full_name.toUpperCase()} <br></br>
                 <strong>Open Issues Count </strong>: {props.repo.open_issues_count} <br></br>
-                <strong>URL </strong>: {props.repo.html_url} <br></br>
+                <strong>URL </strong>: <a href={props.repo.html_url} onClick={(e)=>{e.stopPropagation()}}> {props.repo.html_url} </a> <br></br>
                 <strong>Languages</strong> : {languages}
             </p>
 
