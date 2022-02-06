@@ -1,8 +1,22 @@
+import './Repository.css'
+
+import { useState, useEffect } from 'react';
+import fetchLanguages from '../../api/fetchLanguages';
+
+
 let Repository = (props) => {
-    return <div className="card mx-auto my-5" style={{width:"min(100%,600px)",boxShadow:"0px 0px 10px black", height:"400px",overflow:"auto",cursor:"pointer"}}>
-        <div className="card-body">
-            {JSON.stringify(props.repo)}
-        </div>
+    const [languages, setLanguages] = useState({})
+    useEffect(() => {
+        fetchLanguages(props.repo.languages_url, setLanguages)
+    }, [props.repo.languages_url])
+    return <div className="repo" >
+        <p>
+            Name:{props.repo.full_name} <br></br>
+            Count:{props.repo.open_issues_count} <br></br>
+            URL:{props.repo.html_url} <br></br>
+            Languages:{JSON.stringify(languages)}
+        </p>
+
     </div>
 
 }

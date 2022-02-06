@@ -1,0 +1,12 @@
+.flexbox{
+    display: flex;
+    padding: 20px;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.justify-around{
+    justify-content: space-around;
+}
