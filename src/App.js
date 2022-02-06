@@ -16,9 +16,7 @@ function App() {
       <Provider value={{data, setData,setSelectedRepo}}>
         <Modal repo={selectedRepo}></Modal>
         <Header></Header>
-        <div className='flexbox flex-wrap justify-around'>
           <Repositories></Repositories>
-        </div>
       </Provider>
     </div>
   );
