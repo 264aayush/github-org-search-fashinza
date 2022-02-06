@@ -22,7 +22,7 @@ let fetchLanguages = (url,setLanguages) => {
                 for(let i in data){
                     initialState=initialState+ `${i} (${data[i]}%) `;
                 }
-				setLanguages(initialState);
+				setLanguages(initialState!==" "?initialState:"Unknown");
 			}).catch(e=>{
                 console.log(e);
                 setLanguages("none")
