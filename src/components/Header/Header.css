@@ -16,6 +16,7 @@
 .search-form {
     margin-right: 20px;
     float: right;
+    /* display: inline; */
 }
 
 .search-box {
@@ -24,17 +25,20 @@
     padding-left: 10px;
     border-radius: 4px;
     height: 40px;
+    /* display: inline; */
 }
 
-.search-btn{
+.search-btn {
     height: 40px;
     border-radius: 4px;
     padding: 10px;
     margin-left: 10px;
     background-color: whitesmoke;
     border: 1px solid gold;
+    /* display: inline; */
 }
-.search-btn:hover{
+
+.search-btn:hover {
     height: 40px;
     background-color: gold;
 
@@ -43,4 +47,15 @@
 
 .inline {
     display: inline-block;
+}
+
+@media only screen and (max-width: 764px) {
+    .search-form {
+        margin-top: 5px;
+        display: block;
+        float: none;
+    }
+    .search-box{
+        margin-left: 10px;
+    }
 }

@@ -5,6 +5,7 @@ let fetchLanguages = (url,setLanguages) => {
 		.then(res => {
 			if (res.status !== 200) {
 				console.log('Looks like there was a problem. Status Code: ' + res.status);
+				setLanguages("none")
 				return {};
 			}
 			res.json().then( data=> {
@@ -15,10 +16,16 @@ let fetchLanguages = (url,setLanguages) => {
                 for(let i in data){
                     data[i]=(data[i]*100/sum).toFixed(2)
                 }
-				setLanguages(data);
+				console.log(data);
+				let initialState=" ";
+				
+                for(let i in data){
+                    initialState=initialState+ `${i} (${data[i]}%) `;
+                }
+				setLanguages(initialState);
 			}).catch(e=>{
                 console.log(e);
-                setLanguages({})
+                setLanguages("none")
             })
             
             ;
