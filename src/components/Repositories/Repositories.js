@@ -8,7 +8,7 @@ let Repositories = () => {
     return <Consumer>
         {({ data }) => {
             if (data.length === 0)
-                return <div className='not-found' > <p className='not-found-message'> Organisation not found on Github. Please enter a organisation name like google, octokit, microsoft etc. </p></div>
+                return <div className='not-found' > <p className='not-found-message'> Please enter a valid organisation name like google, octokit, microsoft etc. </p></div>
             let length = data.length;
             let nextPage = () => {
                 if (length <= page * 6)
