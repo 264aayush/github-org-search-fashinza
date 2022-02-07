@@ -4,14 +4,13 @@
 }
 
 .page-btn{
-    border: 1px solid rgb(160, 160, 207);
+    border: 1px solid #2c3e50;
     padding: 5px 15px;
     margin: 15px;
-    background: rgb(105, 173, 173);
+    background: #2c3e50;
     border-radius: 3px;
     font-size: 1.2rem;
     color: gold;
-    border: 1px solid gold;
 }
 
 .page-btn:hover{
